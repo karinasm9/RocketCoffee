@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --backgrond: #000;
+    --text-color: #FFF;
+    --button: #8257E5;
+    --border: #29292E;
+    --border-menu-mobile: #A8A8B3;
+    --text-color-menu-mobile: #E1E1E6;
+}
+
+body,
+html {
+    background: var(--backgrond);
+    font-family: "Manrope";
+    height: 100vh;
+}
+
+body {
+    padding-top: 5rem;
+    background: url(./assets/rocket-coffee.png), url(./assets/blur-1.png), url(./assets/blur-2.png);
+    background-repeat: no-repeat;
+    background-position: bottom center, bottom left, top right;
+    background-size: 60%, 60%, 40%;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+header {
+    padding-left: 132px;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 918px;
+    width: 90%;
+    margin: auto;
+}
+
+header ul {
+    display: flex;
+}
+
+header li a {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+    text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
+    padding-inline: 1rem;
+}
+
+.menu a:hover {
+    opacity: 80%;
+    transition: 0.5s;
+    background-color: var(--border-menu-mobile);
+    color: var(--backgrond);
+}
+
+header .botao {
+    width: 172px;
+    height: 37px;
+    border: 1px solid var(--button);
+    background-color: transparent;
+    border-radius: 6px;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "Manrope";
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+header .botao a {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+    text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
+
+}
+
+header .botao:hover {
+    background-color: var(--button);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem auto;
+}
+
+main h1 {
+    display: none;
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 3rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.titulo {
+    color: var(--text-color);
+    font-size: 80px;
+
+}
+
+.titulo1 {
+    text-shadow: rgb(130 87 229) -1px -1px 0px, rgb(130 87 229) 1px -1px 0px, rgb(130 87 229) -1px 1px 0px, rgb(130 87 229) 1px 1px 0px;
+    color: var(--backgrond);
+    font-size: 80px;
+
+}
+
+.corpo {
+    text-align: center;
+    font-weight: 700;
+    margin-top: 6%
+}
+
+/*para mobile*/
+header .logo-mobile {
+    display: none;
+}
+
+header .menu-mobile {
+    display: none;
+}
+
+main .texto-mobile {
+    display: none;
+}
+
+main .bootao-mobile {
+    display: none;
+}
+
+
+@media screen and (max-width:960px) {
+
+    body {
+        padding-top: 3.5rem;
+        background: url(./assets/rocket-coffee.png), url(./assets/blur-mobile.png);
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-attachment: fixed;
+        background-size: 100%, 100vw 60%;
+    }
+
+    header {
+        padding-left: 0;
+    }
+
+    header .container {
+        width: 85%;
+    }
+
+    header .logo-desktop {
+        display: none;
+    }
+
+    header .botao {
+        display: none;
+    }
+
+    header .menu {
+        display: block;
+        visibility: hidden;
+        width: 100vw;
+        height: 0px;
+        position: absolute;
+        top: 9.5rem;
+        left: 0;
+        background-color: var(--backgrond);
+        z-index: 999;
+        transition: 0.5s;
+        overflow-y: hidden;
+    }
+
+    main {
+        width: 100vw;
+        height: 90vw;
+        padding-top: 8%;
+        padding-bottom: 63%;
+        margin: 2.5rem auto;
+        border-top: 1px solid var(--border);
+    }
+
+    main h1 {
+        display: block;
+    }
+
+    .titulo {
+        font-size: 70px;
+    }
+
+    .titulo1 {
+        font-size: 60px;
+    }
+
+    .corpo-bootao {
+        justify-content: center;
+        display: flex;
+    }
+
+    .corpo {
+        width: 100%;
+    }
+
+    /*mobile - 960 */
+    header .logo-mobile {
+        display: flex;
+    }
+
+    header .menu-mobile {
+        display: block;
+    }
+
+    header .botao-mobile {
+        width: 24px;
+        height: 8px;
+        margin-bottom: 0.2rem;
+        border: none;
+        background: url(./assets/menu-buguer-open.svg);
+        transition: 0.5s;
+    }
+
+    .texto-mobile h1 {
+        color: var(--text-color);
+        font-weight: 400;
+        font-size: 30px;
+        text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
+    }
+
+    .bootao-mobile a {
+        font-size: 13px;
+        font-weight: 400;
+        color: var(--text-color);
+        text-decoration: none;
+        text-shadow: 0 4px 4px rgb(0, 0, 0, 0.25);
+        padding-inline: 2rem;
+    }
+
+    .bootao-mobile:hover {
+        background-color: var(--button);
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    header .botao-mobile.close {
+        width: 18px;
+        height: 18px;
+        background: url(./assets/menu-buguer-close.svg);
+    }
+
+    main .texto-mobile {
+        width: 90%;
+        max-width: 900px;
+        display: block;
+        padding-inline: 5.7rem;
+        text-align: center;
+    }
+
+    main .bootao-mobile {
+        width: 15rem;
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-color);
+        font-family: "manrope", sans-serif;
+        font-weight: 700;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 0.1rem solid var(--button);
+        border-radius: 0.6rem;
+        margin-top: 2%;
+    }
+
+    .bootao-mobile:focus {
+        background-color:var(--button);
+        transition: 0.3s;
+    }
+
+    /* Quando for utilizr o script - open*/
+    .menu.open {
+        height: calc(100vh - 9.5rem);
+        visibility: visible;
+    }
+
+    .menu.open ul {
+        display: block;
+        border-top: 1px solid var(--border);
+    }
+
+    .menu.open li {
+        height: 5.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-block: 0.7rem;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .menu.open a {
+        width: 100vw;
+        height: 5.7rem;
+        display: flex;
+        align-items: center;
+        padding-left: 3.5rem;
+        color: var(--border-menu-mobile);
+        font-size: 2rem;
+    }
+
+    .menu.open a:focus {
+        color: var(--text-color);
+        opacity: 100%;
+        border-left: 5px solid #8257e5;
+        padding-left: 3rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    body {
+        background-size: 60%, 60%, 40%;
+    }
+
+    header .container {
+        max-width: 1300px;
+    }
+
+    .corpo {
+        margin-top: 3%
+    }
+
+    header li a {
+        font-size: 25px;
+    }
+}
+
+
+@media screen and (max-width: 1474px) {
+    body {
+        padding-top: 5rem;
+        background: url(./assets/rocket-coffee.png);
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: 70%;
+        background-attachment: fixed;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        padding-top: 5rem;
+        background: url(./assets/rocket-coffee.png);
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: 80%;
+        background-attachment: fixed;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        padding-top: 5rem;
+        background: url(./assets/rocket-coffee.png);
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: 90%;
+        background-attachment: fixed;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .texto-mobile h1 {
+        font-size: 30px;
+        margin-bottom: 5%;
+    }
+
+    body {
+        padding-top: 5rem;
+        background: url(./assets/rocket-coffee.png);
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: 120%;
+        background-attachment: fixed;
+        overflow: hidden;
+    }
+
+    .corpo {
+        margin-top: 15%;
+    }
+}
+
+@media screen and (max-width: 427px) {
+    .texto-mobile h1 {
+        font-size: 30px;
+        margin-bottom: 5%;
+    }
+
+    body {
+        padding-top: 5rem;
+        background: url(./assets/rocket-coffee.png);
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: 120%;
+        background-attachment: fixed;
+        overflow: hidden;
+    }
+
+    .corpo {
+        margin-top: 15%;
+    }
+}
